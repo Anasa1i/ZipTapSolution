@@ -1,0 +1,622 @@
+/* GOOGLE FONT  */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* BASE RULE  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* HTML STYLE */
+
+html {
+    font-size: 65%;
+    /* { 1rem = 10px } yeh hmhe responsive krty wqt bht he km ayegi... */
+}
+
+/* mei chahta hun sb heading mei same font used ho toh yeh class dunga */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+p,
+li,
+a{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    /*font size isse dengy */
+
+    letter-spacing: 0.1rem;
+    /* home in letters ke bech mei space iss property se dety hain jo hai letter-spacing*/
+    
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    font-weight: 400;
+    /*line mei gap aayega in height ki trhn*/
+}
+
+a {
+    text-decoration: none;
+    /*home words ke neche jo line arahi thi usse yeh property dene se hat jayegi mtlb NONE kuch nh deni decoration*/
+
+    font-weight: 500;
+    /*font weight propert dene se TEXT DARK HORHY*/
+
+    color: black;
+}
+
+li {
+    list-style: none;
+    /*isse dene se jo HOME ABOUT WORDS se pehly bullet yeh (◙) hat jayega list styling none se*/
+}
+/* ALL COLORS IN ONE FRAME */
+
+:root {
+    --main-color: #0062ff;
+    --supporting-color:#ebf3fe;
+    --font-color: #424242;
+    /* --bg-color:#ffffff; */
+    --bg-color:#f7fcff;
+    --heading-color:#000a19;
+    --hero-heading-color:#003b99;
+    --white-color:#ffffff;
+    --para-color:#504e4d;
+    --bnt-hover-bg-color:#003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --footer-bg-color:#040d12;
+}
+
+/* START NAVBAR SECTION STYLE  */
+
+/* Layout */
+.container {
+    max-width: 142rem;
+    /* Total Screen Size jitna hojata */
+
+    margin: 0 2.4rem;
+    /* video mei auto tha 0 auto */
+    /* Top Bottom - Left Right*/
+
+    padding: 5.6rem 2.4rem;
+    /*Top Bottom - Left Right */
+
+    /*isse yeh faida hoga responsive krty waqt or kuch bhi krty wohi words bilkl nh chipkengy yeh PROPERTY gap degi*/
+}
+
+.section-why--choose .container:first-child {
+    padding: 6.4rem 0 2.4rem 0;
+}
+
+.section-about .container:first-child,
+.section-blog .container:first-child,
+.section-course .container:first-child,
+.section-contact--homepage .container:first-child,
+.section-why--choose .container:first-child{
+    padding: 6.4rem 0 2.4rem 0;
+}
+
+
+/* Hero section container GRID classes */
+
+.grid {
+    display: grid;
+    /*Display Grid de kr btana hota ke grip mei krna*/
+}
+
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+    /* Grid 2 columns mei convert krdega 1fr size mei */
+}
+
+.grid-three--cols {  
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* <!-- START ABOUT SECTION STYLING --> */
+
+
+.section-common-heading {
+    font-size: 2.5rem;
+    /*font size dengy */
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.section-common-subheading {
+    color: black;
+}
+ 
+/* h3 style in about section
+ */
+.section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+}
+
+/* .fa-brands{
+    padding: 2.5rem; /* padding de hai */
+    /* background-color: rgb(49, 77, 102); color diya hai backgrounf ka font JS ko */
+    /* font-size: 2.4rem; JS bht chota icone font size de kr bada hgya */
+    /* border-radius: 50%; icon ka background circle mei ajayega */
+    /* color: yellow; */
+/* } */ */
+
+/* <!-- END ABOUT SECTION STYLING --> */
+.btn {
+    display: inline-block;
+    /*Box model mei hum kbhi bhi padding top-boottm nh deskhty km he nh krta, inline element mei nh deskhty kbhi bhi -- Islye mei issse inline-Block Krdya*/
+    padding: 1.2rem 2.7rem;
+    /*top bottm , left right*/
+    background-color: blue;
+    /*btn background color*/
+    color: white;
+    /*Button ke words  ka color change kiya*/
+    border-radius: 0.6rem;
+    /*border radius se button ka jo b order thoda curve hogya*/
+}
+
+.btn:hover {
+    background-color: rgb(148, 129, 129);
+    cursor: pointer;
+    /*hath ka nishan, jab hum mouse ka logo change yeh kam hai iska*/
+    /* box-shadow: rgb(188, 0, 0); */
+    /*isne km nh kiya*/
+}
+
+/******** Navbar Section ********/
+.section-navbar {
+    width: 100%;
+    /*pure header ko 100% widht miljayegi isse*/
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /*Box ko shadow diya hai */
+}
+
+.section-navbar .container {
+    display: flex;
+    /*iska thoda sir se guzra lekin flex jb use kiya toh ek limit space mei agaya or horizontaly mei*/
+
+    justify-content: space-between;
+    /*Space netween de kr beech sara space dediya or corner pr chale gaya*/
+
+    align-items: center;
+    /*iss property ko dene se | vertically centre mei agyaa*/
+
+    padding: 1.8rem;
+    /* Top Bottom 180px in rem 1.8 - Left Right o di hai mtlb kuch bhi nh*/
+
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    /*Horizontaly mei agaya ek he line mei mtlb display flex dene se*/
+
+    gap: 3.2rem;
+    /* HOME ABOUT ETC inn sarou mei gap agaya iss proprty ko use kr ke*/
+
+    /* text-transform: capitalize;  */
+    /*texts capitalize hogya*/
+
+    /* ab hum nested use krngy */
+    & li a {
+        /*li ke andr hai a    using space LI A*/
+        color: black;
+        text-transform: uppercase;
+        /*sare words UPPERCASE hojayngy*/
+
+        font-weight: 600;
+        /*sare words ka weights dark krengy khul kr like dark */
+
+        display: inline-block;
+        /*Abhi zarrt nh thi, lekin mei baad mei inke sath khel skhu*/
+
+        font-size: 1.1rem;
+        /* Font size dengy iss prprty se 1.1 rem mean 11px*/
+
+        position: relative;
+        /* kyun ke mei iss ke child ::After mo position absolute dunga */
+
+        /* ab a ke andr he hum nested ka used krengy & ka opertr lga kr */
+        &::after {
+            content: "";
+            /* kuch likhne ke liye lekin yeh khali hai toh iss mei srf css style krskhty hain*/
+
+            position: absolute;
+            /* yeh isliye diya bilkul words ke center mei ese he hojaye start lekin humner bottom se krne means ek ke upr ek phr nche prpty de kr set kryngy */
+
+            bottom: -0.1rem;
+            /*yeh bottom se start hoga iss liye use kiya by default iska top se shuru hota hota 0.1 rem mean itna spce le kr kry*/
+
+            left: 0;
+            /*yeh left se start hoga iss liye use kiya by default iska right se shuru hota hota 0 space le kr*/
+
+            width: 0%;
+            /* width isliye di 0% se start ho*/
+
+            border-bottom: 0.1rem solid blue;
+            /* border size 0.2 rem, solid style, color blue*/
+
+            /* border-bottom dengy, not BORDER */
+
+            transition: all 0.3s;
+            /* -webkit-transition: all 0.1s linear;
+            -moz-transition: all 0.1s linear;
+            -ms-transition: all 0.1s linear;
+            -o-transition: all 0.1s linear; */
+            /* hover lgane ke baad mei idhr aaya or isse transition dunga */
+        }
+    }
+
+    /* ab ul ke andr he hum nested ka used krengy & ka opertr lga kr usse HOVER dngy */
+    & li a:hover:after {
+        width: 97%;
+        /* color: yellow; */
+        /* Jab mei Hover krun toh width words ki puri 100% lely*/
+    }
+}
+
+/* END NAVBAR SECTION STYLE  */
+
+
+
+/***   SECTION START ***/
+main {
+    position: relative;
+    background-image: linear-gradient(to top right,
+            #3d86fa,
+            #4484fb,
+            #679eff,
+            #b3d2ff,
+            #ebf3fe);
+    /*isse yeh faida huwa background color kam nh kr rha background image property km krgai*/
+}
+
+/* shape divider one main head in web -  */
+.custom-shape-divider-bottom-1713824709 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1713824709 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 74px;
+}
+
+.custom-shape-divider-bottom-1713824709 .shape-fill {
+    fill: #FFFFFF;
+}
+/* hero img */
+.section-hero--image img {
+    width: 100%;
+    /*widht dene se img responsice hogaye*/
+    height: auto;
+    /*height apne hisb se leli*/
+
+    transform: scaleX(-1);
+    /*yeh transform scaleX(-1) property dne se picture flip hogayii*/
+}
+
+/* text heading paragraph buttn */
+.section-hero .grid{
+    align-items: center;
+    /* yeh dene grip wale items centre mei agaye sare heading or text*/
+    gap: 6.4rem;
+
+    & .hero-subheading{
+        /*Nested */
+        text-transform: uppercase;
+        /* upper case hojayega*/
+        letter-spacing: 0.2rem;
+        /*letter mei space araha letter spacing ki property use krne se*/
+        font-size: 1.4rem;
+        /*font size bada horha*/
+        word-spacing: .2rem;
+        /*word spacing apas mei*/
+        color: black;
+        font-weight: 700;
+        position: relative;
+
+    }
+
+    & .hero-heading{
+        font-size: 4.3rem;
+        /*font size barhana hoga*/
+        font-family: 'jost';
+        /*font konsa rkhna iss property se lgyngy*/
+        color: black;
+        /*text color hoga*/
+        font-weight: 900;
+        /*font weight brh jayega*/
+    }
+
+    & .hero-para{
+        color: white;
+        margin:
+            /*top*/
+            2rem
+            /*right*/
+            0
+            /*bottom*/
+            4rem
+            /*left*/
+            0;
+    }
+}
+
+/*** END HERO SECTION ***/
+
+/***  ABOUT SECTION ***/
+.section-about .grid{
+    gap: 6.4rem;
+}
+
+.section-about .about-div{
+    text-align: center;
+}
+.section-about img{
+    padding: 2.4rem;
+    /**/
+    background-color: rgb(221, 220, 220);
+    width: 15rem;
+    /* Size ki tarhan kam kr balky size ke liye he hai*/
+    height: auto;
+    /* HEIGHT AUTO DENE SE AUTOMATIC HOJAYEGA*/
+    border-radius: 50%;
+    /* CIRCLE HOJAYEGA BORDER RADIUS DNE SE*/
+
+    transition: all 0.3s linear; /* bohot zarori hai yeh jb bhi roatet ya trnsform krne xhayn yeh parent hai isko dena lazmi*/
+}
+
+.about-div .icon:hover img {
+    /* transition dene ke liye iskie parent ko lgega phr he km krega like postion relative or absolte ki trhn*/
+    /* background-color: red; */
+    rotate: 360deg; /* Rotate krskhty */
+    /* background-color: red; */
+}
+/***  END ABOUT SECTION ***/
+
+/***  START EXPLORE SECTION ***/
+.icon .fa-brands{
+    
+}
+/***  END EXPLORE SECTION ***/
+
+
+/* course section icon js style */
+
+.section-course{
+    background-color: var(--bg-color);
+
+}
+
+
+.section-course .grid{
+    gap: 6.2rem;
+}
+
+.section-course .course-div{
+    padding: 2.6rem;
+}
+
+
+.section-course .course-div:hover {
+    box-shadow: rgb(76, 75, 78);
+}
+
+
+.course-div:nth-child(1) .icon .fa-solid{
+    color: #513e1d;
+    background-color: #b5b7bc;
+}
+
+.course-div:nth-child(2) .icon .fa-solid{
+    color: #68bf9b;
+    background-color: #e7f6ef;
+}
+.course-div:nth-child(3) .icon .fa-solid{
+    color: #ff8b52;
+    background-color: #fbebe8;
+}
+.course-div:nth-child(4) .icon .fa-solid{
+    color: #183d3d;
+    background-color: #ccf7f7;
+}
+.course-div:nth-child(5) .icon .fa-solid{
+    color: #d988b9;
+    background-color: rgb(247, 223, 238);
+}
+.course-div:nth-child(6) .icon .fa-solid{
+    color: #ff9b50;
+    background-color: #f6dfce;
+}
+.course-div:nth-child(7) .icon .fa-solid{
+    color: #1450a3;
+    background-color: #dce9fa;
+}
+
+
+/* icon design csss style */
+
+.fa-solid{
+    padding: 2.5rem; /* padding de hai */
+    background-color: aliceblue; /* color diya hai backgrounf ka font JS ko*/
+    font-size: 2.4rem; /* JS bht chota icone font size de kr bada hgya*/
+    border-radius: 50%; /*icon ka background circle mei ajayega*/
+    color: yellow;
+}
+
+
+/***  START Why choose SECTION ***/
+
+.section-why--choose .grid{
+    gap: 9.6rem;
+}
+
+.why-choose--div{
+    margin-top: 3.2rem;
+}
+
+
+.section-why--choose .text-align--right .why-choose--div{
+    /* text-align: right; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+
+    text-align: right;
+}
+
+.common-text--highlight{
+    width: 6rem;
+    aspect-ratio: 1;
+    background-color: rgb(135, 160, 156);
+    color: rgb(34, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+/* centre div */
+
+.choose-center--div img {
+    width: 90%;
+}
+
+.choose-center--div, figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.choose-center--div figure::before,
+.choose-center--div figure::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(8, 99, 255);
+    width: 45rem;
+    /* aspect-ratio: 1; */
+    height: 45rem;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+
+.choose-center--div figure::before{
+    animation: circle 5s linear infinite;
+}
+
+@keyframes circle{
+    0%{
+        background-color: #b3d0ff;
+    }
+    25%{
+        background-color: #80b1ff;
+    }
+    50%{
+        background-color: #4d914dff;
+    }
+    75%{
+        background-color: #99c0ff;
+    }
+    100%{
+        background-color: #3381ff;
+    }
+    
+}
+
+/* transparent gray cirle border */
+.choose-center--div figure::after{
+    width: 50rem;
+    /* aspect-ratio: 1; */
+    height: 50rem;
+    background-color: transparent;
+    z-index: -2;
+    border: 0.5rem solid gray;
+}
+/***  END Why choose SECTION ***/
+
+
+/***  CONTACT HOME SECTION ***/
+
+.section-contact--homepage{
+    width: 60%; 
+    min-height: 30rem;
+    margin: 0 auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 5rem;
+    border-radius: 0.2rem;
+    padding: 0 3.2rem;
+
+    & .grid {
+        align-items: center;
+        gap: 6.4rem;
+    }
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+.contact-content p {
+    margin:  1.2rem 0 2.4rem 0;
+}
+
+/*               btn             */
+
+..section-contact--homepage a {
+color: white;
+}
+.section-contact--homepage .fa-solid{
+    padding: 0;
+    background-color: #3381ff;
+    color: white;
+}
+
+.section-contact--homepage img{
+    width: 90%;
+    height: auto;
+}
+
+/****  CONTACT HOME SECTION ***/ 
+
+footer{
+    background-color: var(--footer-bg-color);
+    padding-top: 5rem;
+}
+
+footer *{
+color: white;
+}
